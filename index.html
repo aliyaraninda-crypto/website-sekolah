@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SMK Negeri 1 Ninda</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>SMK Negeri 1 Ninda</h1>
+      <nav>
+        <ul>
+          <li><a href="#profil">Profil</a></li>
+          <li><a href="#jurusan">Jurusan</a></li>
+          <li><a href="#pendaftaran">Pendaftaran</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+      <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Selamat Datang di Website Resmi</h2>
+      <p>SMK Negeri 1 Ninda – Sekolah Vokasi Berkualitas</p>
+      <a href="#profil" class="btn">Lihat Profil Sekolah</a>
+    </div>
+  </section>
+
+  <section id="profil" class="content">
+    <div class="container">
+      <h3>Profil Sekolah</h3>
+      <p>SMK Negeri 1 Ninda adalah sekolah menengah kejuruan yang berlokasi di Kabupaten Bantul, Daerah Istimewa Yogyakarta. Sekolah ini menyediakan pendidikan vokasi yang bertujuan untuk mempersiapkan siswa agar siap memasuki dunia kerja dengan keterampilan yang kompeten dan sesuai kebutuhan industri. SMK Negeri 1 Ninda memiliki berbagai program keahlian seperti Teknik Komputer dan Jaringan, Akuntansi, dan beberapa jurusan lainnya yang mendukung pengembangan kemampuan praktis dan teori siswa.</p>
+      <br>
+    </p>Selain fokus pada aspek kejuruan, SMK Negeri 1 Ninda juga menekankan pengembangan karakter dan soft skills siswa melalui berbagai kegiatan ekstrakurikuler dan pembinaan budaya sekolah. Dengan tenaga pengajar yang profesional serta fasilitas yang memadai, sekolah ini terus berupaya meningkatkan kualitas pendidikan agar lulusannya mampu bersaing di pasar kerja maupun melanjutkan pendidikan ke jenjang yang lebih tinggi.</p>
+    </div>
+  </section>
+
+  <section id="jurusan" class="content gray">
+    <div class="container">
+      <h3>Jurusan Unggulan</h3>
+      <ul>
+        <li>Teknik Komputer dan Jaringan</li>
+        <li>Rekayasa Perangkat Lunak</li>
+        <li>Desain Komunikasi Visual</li>
+        <li>Manajemen Perkantoran</li>
+        <li>Akuntansi dan Keuangan Lembaga</li>
+        <li>Bisnis Retail</li>
+        <li>Bisnis Digital</li>
+        <li>Layanan Perbankan Syariah</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="kontak" class="content">
+    <div class="container">
+      <h3>Kontak Kami</h3>
+      <p>Email: info@ranindaaliya.sch.id</p>
+      <p>Telepon: 0831-2839-2242</p>
+      <p>Alamat: Jl. Parangtritis KM 11, Dukuh Sabdodadi, Kec.Bantul, Kab.Bantul,D.I Yogyakarta.</p>
+      <!-- Google Maps Embed-->
+      <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.0493324861227!2d110.35305437613161!3d-7.889907978489525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7b00889ad8f84d%3A0x2e0009ca7815eaf0!2sSMK%20Negeri%201%20Bantul!5e0!3m2!1sid!2sid!4v1755582328407!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></>"
+          </iframe>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 SMK Negeri 1 Ninda. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button id="btnUp" title="Scroll ke atas">⬆️</button>
+
+  <script src="script.js"></script>
+
+  <script>const darkModeToggle = document.getElementById('darkModeToggle');
+darkModeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  if (document.body.classList.contains('dark-mode')) {
+    darkModeToggle.textContent = '☀️';
+  } else {
+    darkModeToggle.textContent = '🌙';
+  }
+});
+
+const btnUp = document.getElementById('btnUp');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 200) {
+    btnUp.style.display = 'block';
+  } else {
+    btnUp.style.display = 'none';
+  }
+});
+
+btnUp.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+});</script>
+  
+ <section id="pendaftaran" class="content">
+    <div class="container">
+      <h3>Form Pendaftaran</h3>
+      <form id="registrationForm">
+        <label for="fullname">Nama Lengkap:</label><br />
+        <input type="text" id="fullname" name="fullname" placeholder="Nama lengkap" required /><br /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" placeholder="Email aktif" required /><br /><br />
+
+        <label for="phone">No. Telepon:</label><br />
+        <input type="tel" id="phone" name="phone" placeholder="Nomor telepon" required /><br /><br />
+
+        <label for="address">Alamat:</label><br />
+        <textarea id="address" name="address" rows="3" placeholder="Alamat lengkap" required></textarea><br /><br />
+
+        <label for="jurusan">Pilih Jurusan:</label><br />
+        <select id="jurusan" name="jurusan" required>
+          <option value="" disabled selected>-- Pilih Jurusan --</option>
+          <option value="Teknik Komputer dan Jaringan">Teknik Komputer dan Jaringan</option>
+          <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
+          <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
+          <option value="Manajemen Perkantoran">Manajemen Perkantoran</option>
+          <option value="Akuntansi dan Keuangan Lembaga">Akuntansi dan Keuangan Lembaga</option>
+          <option value="Bisnis Retail">Bisnis Retail</option>
+          <option value="Bisnis Digital">Bisnis Digital</option>
+          <option value="Layanan Perbankan Syariah">Layanan Perbankan Syariah</option>
+        </select><br /><br />
+
+        <button type="submit">Daftar Sekarang</button>
+      </form>
+
+      <div id="formMessage" style="margin-top: 10px; color: green;"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 SMK Negeri 1 Ninda. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
